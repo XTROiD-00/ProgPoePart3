@@ -1,0 +1,36 @@
+﻿<Window x:Class="ProgPoePart3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgPoePart3"
+        mc:Ignorable="d"
+        Title="Cyber Security App" Height="600" Width="1000">
+
+    <Grid 
+           Height="600" Width="1000"
+          >
+        <!-- Logo image -->
+
+        <!-- Quiz area -->
+        <StackPanel Width="450" Margin="100,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock Text="CyberQuiz" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBlock x:Name="DisplayingQuestion" Text="Question will appear here" Margin="0,0,0,10" TextWrapping="Wrap"/>
+
+            <Button x:Name="Button1" Click="HandleAnswerSelection" Margin="0,5" Height="35"/>
+            <Button x:Name="Button2" Click="HandleAnswerSelection" Margin="0,5" Height="35"/>
+            <Button x:Name="Button3" Click="HandleAnswerSelection" Margin="0,5" Height="35"/>
+            <Button x:Name="Button4" Click="HandleAnswerSelection" Margin="0,5" Height="35"/>
+
+            <TextBlock x:Name="DisplayingScore" Text="Score will display here" Margin="0,10,0,0" FontWeight="Bold"/>
+            <Button x:Name="NextQuestionButton" Content="Next Question" Click="HandleNextQuestion" Background="BurlyWood" Margin="0,5,0,0" Height="35"/>
+        </StackPanel>
+
+        <!-- Chat + Reminder area -->
+        <StackPanel Width="400" Margin="550,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ListView x:Name="combinedChat" Height="300" Margin="0,0,0,10"/>
+            <TextBox x:Name="combinedText" Height="30" Margin="0,0,0,10"/>
+            <Button Content="Set Reminder / Ask" Height="30" Click="set_reminder"/>
+        </StackPanel>
+    </Grid>
+</Window>
